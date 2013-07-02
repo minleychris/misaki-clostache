@@ -33,7 +33,7 @@
   (if (string? slurped-data)
     (let [lines  (str/split-lines slurped-data)
           params (remove nil? (map parse-option-line lines))]
-      (into {} (for [[[_ k v]] params] [(keyword k) v])))
+      (into {} (for [[[_ k v]] params] [(keyword k) (load-string v)])))
     {}))
 
 ; =remove-option-lines
