@@ -9,3 +9,12 @@ pom.xml
 .lein-failures
 .lein-plugins
 login_details
+blog.sublime*
+.DS_Store
+.lein-repl-history
+minley/public/2012*
+minley/public/2013*
+minley/public/archive.html
+minley/public/atom.xml
+minley/public/index.html
+minley/public/page2
