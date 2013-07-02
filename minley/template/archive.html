@@ -1,0 +1,21 @@
+; @title  "Archive"	
+; @layout "layout"
+
+
+<div class="hero-unit">
+    <h1>minley.org</h1>
+    <h2>Archive</h2>
+</div>
+
+{{#all-posts}}
+	<div class="row">
+	    <div class="span8 offset2">
+	        <h2>{{title}}</h2>
+	        <p class="muted">{{date}}</p>
+	        <p>{{summary}}</p>
+	        <p><a class="btn" href="{{url}}">More &raquo;</a></p>
+	    </div>
+	</div>
+{{/all-posts}}
+
+

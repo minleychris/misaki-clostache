@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>minley.org</title>
+    <link rel="self" href="http://minley.org" />
+    <link href="http://minley.org" />
+    <updated></updated>
+    <id>http://minley.org</id>
+    <author>
+        <name>Chris Wilson</name>
+    </author>
+
+    <entry>
+        <title>EHRD.clj Clojure Dojo</title>
+        <link>http://minley.org/2013-06/clojure-dojo.html</link>
+        <updated>2013-06-18T00:00:00</updated>
+        <id>http://minley.org/2013-06/clojure-dojo.html</id>
+        <content type="html"><p></p>
+<p><i>This post is also on the <a href="http://www.ehrdclj.org/blog/first-meetup">Rotterdam/The Hague Clojure Meetup</a> blog</i></p>
+
+<img src="/img/dojo.jpg" style="float: right; margin: 0px 0px 10px 10px" />
+
+<p>
+  For the third Rotterdam/The Hague Clojure Meetup we decided to run a Dojo.  For the uninitiated a Dojo, in this context, is a structured group exercise to practice programming.  Dojos come from the idea of Coding Katas, initially expressed in the book <a href="http://pragprog.com/book/tpp/the-pragmatic-programmer">The Pragmatic Programmer</a>.  These Katas were small exercises to practice programming away from work.  In 2005, Parisian Laurent Bossavit decided that doing these exercises in a group would be a better idea and the Dojo concept was born.
+</p>
+
+<p>
+  There are several ways to run a Dojo, but the principal is that people work together on the problem as equals and everyone understands the solution.  They also generally use either Test or Behaviour Driven Development.  We used the Randori or Finnish style which consists of rotating pairs working for a set amount of time on the problem before another pair takes a turn.  Specifically, within the pairs, one is typing and one is working with them.  After five minutes, the typist would go back to the audience, the other would go to the keyboard and the next member of the audience would work with them.
+</p>
+
+<p>
+  Tools-wise we were using Clojure (obviously!), and using <a href="https://github.com/marick/Midje">Midje</a> to do Test-Driven Development.  As an editor we used <a href="http://www.lighttable.com/">LightTable</a>.  We hooked a laptop up to the projector and had a second laptop continuously counting down 5 minute blocks.  I had set up a <a href="https://github.com/EHRD-clj/ehrd-clj-dojo">skeleton project</a> to enable quick start-up.  Before starting I gave a short talk on Midje and on how the Dojo works and during the Dojo I acted as moderator.
+</p>
+
+<p>
+  The problem we chose to solve was to generate Roman numerals from Western positive integers (1->I, 2->II).  Our solution is <a href="https://github.com/EHRD-clj/ehrd-clj-dojo/tree/may_2-13_dojo">here</a>.  Over the course of about 40 minutes we covered numbers up to 19.  Not the quickest work-rate, but its about the journey, not the destination.  I think its fair to say that all participants enjoyed it.  Everyone had two turns at the keyboard, and everyone seemed to get a lot from the exercise.  The group was quite mixed, a couple of participants were mostly new to Clojure while others were more experienced.
+</p>
+
+<h2>Practical points</h2>
+
+<p>
+  As a group we intend to do more Dojos in the future, and as such  would like to draw out some specific things that worked well and some things that could have been better.
+</p>
+
+<h3>Things that were good</h3>
+
+<ul>
+  <li>Using a simple editor was good - no strange key-bindings to confuse people</li>
+  <li>Using Midje was good - its test structure is nice, its auto-test works well and its intuitive to use</li>
+  <li>Having a bare-bones project set up worked well, we could just start coding</li>
+</ul>
+
+<h3>Things that could have been better</h3>
+
+<ul>
+  <li>We could have done with a little more time (we could have started the meeting quicker) - an hour would be a good amount of time.</li>
+  <li>The moderator should have kept the audience a little quieter and more focussed on the problem (sorry!)</li>
+  <li>The editing set-up we had would have been better with the REPL on the same screen as the editor so we could see when tests failed and also work in the REPL as needs be</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>
+  The Dojo worked well despite having a wide range of experience within participants.  It was fun, everyone learned something and everyone had ownership of the solution.  In the future there are some small procedural issues to thing over, but these should be simply solvable.  We're looking forward to the next one!
+</p></content>
+    </entry>
+    <entry>
+        <title>This month in Clojure, April 2013</title>
+        <link>http://minley.org/2013-04/this-month-in-clojure-april.html</link>
+        <updated>2013-04-24T00:00:00</updated>
+        <id>http://minley.org/2013-04/this-month-in-clojure-april.html</id>
+        <content type="html"><p></p>
+
+<p><i>This post first appeared on the <a href="http://www.ehrdclj.org/blog/this-month-in-clojure-april">Rotterdam/The Hague Clojure Meetup</a> blog</i></p>
+
+<p>
+  This is a brief summary of some of the news to come out of the Clojure world during April 2013.
+  This page is just here as a record of what we talked about, mainly as a reference for those present.
+</p>
+
+<h4>Tools</h4>
+<h5>Structural Editing <a href="http://alan.dipert.org/post/47444634908/structural-editing-revisited">http://alan.dipert.org/post/47444634908/structural-editing-revisited</a></h5>
+<p>Its great to see people challenging established orders with clojure</p>
+
+<ul>
+  <li>Based on old ideas od Listp editors</li>
+  <li>Paredit commands</li>
+  <li>No files...</li>
+</ul>
+
+<h4>Libraries</h2>
+<h5>HTTP Kit 2.0(.1) released <a href="http://http-kit.org/">http://http-kit.org/</a></h5>
+<p>Efficient event driven web server with a unified API for WebSocket/long polling.</p>
+
+<ul><li>Bug fixes, cleaning up implementation, api unification.</li></ul>
+
+<h5>Garden <a href="https://github.com/noprompt/garden">https://github.com/noprompt/garden</a></h5>
+<p>Rendering CSS in Clojure</p>
+
+<ul>
+  <li>Conceptually similar to Hiccup</li>
+  <li>Unit concept</li>
+</ul>
+
+<h4>Interop</h2>
+<h5>clojure-py <a href="https://github.com/halgari/clojure-py">https://github.com/halgari/clojure-py</a></h5>
+<p>Implementation of Clojure in Python</p>
+
+<ul>
+  <li>Targetted to pypy virtual machine</li>
+  <li>Interop with Python libraries</li>
+</ul>
+
+<h5>graaph <a href="https://github.com/mrb/graaaph/">https://github.com/mrb/graaaph</a></h5>
+<p>Use JRuby's AST representation of Ruby code from within Clojure</p>
+
+<ul>
+  <li>Goal is to make interop as transparent as possible</li>
+</ul>
+
+
+<h4>Other</h2>
+<h5>Clojure style guide <a href="https://github.com/bbatsov/clojure-style-guide">https://github.com/bbatsov/clojure-style-guide</a></h5>
+<p>Guide on best practices for the real-world.</p>
+
+<h5>Inleiding Functioneel Programmeren met Clojure <a href="http://michielborkent.nl/clojurecursus/">http://michielborkent.nl/clojurecursus/</a></h5>
+<p>Dutch language functional programming guide using Clojure</p>
+
+<h5>Functional Design Patterns <a href="http://www.infoq.com/presentations/Clojure-Design-Patterns">http://www.infoq.com/presentations/Clojure-Design-Patterns</a></h5>
+<p>Video of Stuart Sierra talking about common design patterns.  Very good indeed.</p>
+
+<h5>ClojureWest slides <a href="https://github.com/strangeloop/clojurewest2013">https://github.com/strangeloop/clojurewest2013</a></h5>
+<p>The slides from ClojureWest are now up.</p></content>
+    </entry>
+    <entry>
+        <title>EHRD.clj successful first metup</title>
+        <link>http://minley.org/2013-04/first-meetup.html</link>
+        <updated>2013-04-01T00:00:00</updated>
+        <id>http://minley.org/2013-04/first-meetup.html</id>
+        <content type="html"><p></p>
+<p><i>This post first appeared on the <a href="http://www.ehrdclj.org/blog/first-meetup">Rotterdam/The Hague Clojure Meetup</a> blog</i></p>
+
+
+<img src="/img/cgrand.jpg" style="float: right; margin: 0px 0px 10px 10px" />
+
+<p>
+The first EHRD.clj meetup was held on 27 March in Rotterdam.  We'd like to thank the 23 attendees, the sponsors and, most of all, Christophe Grand for making it such a great success.
+</p>
+<p>
+The evening started with with food and drinks (provided by the sponsors, Lunatech and Planspot) while we chatted with old acquaintances and met new ones.
+We then sat down for a talk from Christophe Grand entitled “You Aren’t Gonna Need It” <a href="/files/27-March-2013-cgrand-YAGNI.pdf">slides</a>.
+</p>
+
+<p>
+Christophe talked about a simplified approach to programming in Clojure specifically for beginners focussing on the core Clojure language and
+libraries rather than spending a lot of time and energy learning all the advanced features of Clojure.  The aim of this is to help
+Clojure beginners to break their old imperative habits and to develop a thorough understanding of the core language.
+This was a great talk, and a great way to bring new Clojure developers into the language without overwhelming them too much.
+</p>
+
+<p>
+We plan to have a regular structure to EHRD.clj meetups - one main feature (a talk or a hackathon or something else) and two shorter discussions,
+“Library of the Month” – a more in-depth look at a single library or tool and “This Month in Clojure”.
+However this month, as we had a guest speaker who had travelled so far
+for the meeting we managed to get two talks out of him.  We did have time, though,
+for a brief “This Month in Clojure” where we discussed people's opinions of
+<a href="http://pedestal.io/">Pedestal</a> and <a href="http://www.lighttable.com/">Light Table</a>, amongst others.
+</p>
+
+<p>
+This was followed by a brief interval for more food and drinks before Christophe started his second talk
+“(def declarative)” <a href="/files/27-March-2013-cgrand-def-declarative.pdf">slides</a>.  This was an exploratory talk covering
+ Christophe's current thinking within the field of declarative programming.
+</p>
+
+<p>
+Christophe started off stating that functional programming is further up the “abstraction ladder” than
+ imperative programming, but he also stated that if we want greater abstraction
+ we need to look towards declarative programming.  This lead into a review of the ways
+functional programming is more abstract than imperative programming before looking briefly
+at the ideas of idempotency and commutativity as the keys to this abstraction.
+He then looked at the areas that Clojure could be more abstract, coming to the conclusion that the sorts of things
+ that are less abstract in Clojure are sequences.  We then looked at some practical ways of making our
+code and our APIs more abstract – Christophe reviewed some of his older open source projects and
+looked at ways to make them more declarative.  Finally Christophe showed us two new projects he's working on
+ – firstly SQRel, a declarative SQL library and secondly “Mashup”, an API to mashup various different data sources.
+This talk gave a lot of food for thought, I particularly liked the idea of applying declarative approaches to APIs.
+</p>
+<p>
+After Christophe's talk we had an opportunity to discuss some of these ideas over drinks.
+</p>
+<p>
+All in all it was a very enjoyable night, much was learned and much was discussed.
+The next meetup will be on <a href="http://www.meetup.com/ehrd-clj/events/106661652/">Wednesday April 24</a> and we're looking forward to it already.  Hope to see you there.
+</p></content>
+    </entry>
+</feed>

@@ -1,0 +1,25 @@
+; @title  "Home"	
+; @layout "layout"
+
+
+
+<!-- Main hero unit -->
+<div class="hero-unit">
+    <h1>minley.org</h1>
+    <h2>Chris Wilson's blog</h2>
+    <p>Thoughts on software development, the Clojure language and whatever else comes into my head.</p>
+</div>
+
+<!-- Boxes for the recent posts -->
+<div class="row">
+	{{#posts}}
+	    <div class="span4">
+	        <h2>{{title}}</h2>
+	        <p class="muted">{{date}}</p>
+	        <p>{{summary}}</p>
+	        <p><a class="btn" href="{{url}}">More &raquo;</a></p>
+	    </div>
+	{{/posts}}
+</div>
+
+
