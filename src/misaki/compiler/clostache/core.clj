@@ -105,7 +105,7 @@
       {:status 'skip :all-compile? true}
       (let [posts     (get-post-data)
             all-posts (get-post-data :all? true)
-            date  (now)]
+            date  (cnf/get-date-from-file file)]
         (render-template
           file
           (merge (:site config)
