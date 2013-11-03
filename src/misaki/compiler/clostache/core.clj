@@ -105,7 +105,17 @@
       {:status 'skip :all-compile? true}
       (let [posts     (get-post-data)
             all-posts (get-post-data :all? true)
-            date  (cnf/get-date-from-file file)]
+            date  (cnf/get-date-from-file file)
+            all-tags (set (apply concat (map #(map (fn [x] (:name x)) (:tags %)) all-posts)))
+            tag-posts (into {}
+                            (map #(vector (keyword %) (filter (fn [x] (some #{%} (map :name (:tags x)))) posts))
+                                 all-tags))
+            tag-posts-all (into {}
+                                (map #(vector (keyword %) (filter (fn [x] (some #{%} (map :name (:tags x)))) all-posts))
+                                     all-tags))]
+        (println all-tags)
+        (println (keys tag-posts))
+        (println (keys tag-posts-all))
         (render-template
           file
           (merge (:site config)
@@ -114,7 +124,9 @@
                   :next-page (:next-page config)
                   :date-xml-schema (date->xml-schema date)
                   :posts     posts;(take (:post-entry-max config) posts)
-                  :all-posts all-posts}))))))
+                  :all-posts all-posts
+                  :tag-posts tag-posts
+                  :tag-posts-all tag-posts-all}))))))
 
 (defn -main [& args]
   (apply srv/-main args))

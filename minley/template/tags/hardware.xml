@@ -1,0 +1,26 @@
+; @title  "minley.org"
+; @base   "http://minley.org"
+; @author "Chris Wilson"
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{title}}</title>
+    <link rel="self" href="{{base}}" />
+    <link href="{{base}}" />
+    <updated>{{date-xml-schema}}</updated>
+    <id>{{base}}</id>
+    <author>
+        <name>{{author}}</name>
+    </author>
+
+    {{#tag-posts}}
+    {{#hardware}}
+    <entry>
+        <title>{{title}}</title>
+        <link>{{base}}{{url}}</link>
+        <updated>{{date-xml-schema}}</updated>
+        <id>{{base}}{{url}}</id>
+        <content type="html"><p>{{summary}}</p>{{&content}}</content>
+    </entry>
+    {{/hardware}}
+    {{/tag-posts}}
+</feed>

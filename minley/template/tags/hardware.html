@@ -1,0 +1,22 @@
+; @title  "Archive"
+; @layout "layout"
+; @alternate "http://minley.org/tags/hardware.xml"
+
+
+<div class="hero-unit">
+    <h1>minley.org</h1>
+    <h2>Archive</h2>
+</div>
+
+{{#tag-posts-all}}
+{{#hardware}}
+	<div class="row">
+	    <div class="span8 offset2">
+	        <h2>{{title}}</h2>
+	        <p class="muted">{{date}}</p>
+	        <p>{{summary}}</p>
+	        <p><a class="btn" href="{{url}}">More &raquo;</a></p>
+	    </div>
+	</div>
+{{/hardware}}
+{{/tag-posts-all}}

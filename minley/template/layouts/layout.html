@@ -9,8 +9,12 @@
         <title>minley.org - {{title}}</title>
         <meta name="description" content="Chris Wilson's blog, containing thoughts on software development, the Clojure language and others">
         <meta name="viewport" content="width=device-width">
+        {{#alternate}}
+        <link rel="alternate" href="{{alternate}}" type="application/atom+xml" />
+        {{/alternate}}
+        {{^alternate}}
         <link rel="alternate" href="http://minley.org/atom.xml" type="application/atom+xml" />
-
+        {{/alternate}}
 
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <style>
