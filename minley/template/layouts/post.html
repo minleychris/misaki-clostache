@@ -1,16 +1,13 @@
 ; @layout "layout"
 
 
-<div class="hero-unit">
-    <h1>minley.org</h1>
-    <h2>{{title}}</h2>
-</div>
-
-
 <!-- Content for other pages -->
 <div class="row">
+
     <div class="span8 offset2">
-        <p class="muted">{{date}}</p>
+        <h2>{{title}}</h2>
+
+        <p class="muted">Posted on {{date}} by <a href="http://twitter.com/minleychris">Chris</a></p>
         <p class="lead">{{summary}}</p>
         
 		{{&content}}
