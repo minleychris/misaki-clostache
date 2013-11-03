@@ -9,7 +9,8 @@
 
         <p class="muted">Posted on {{date}} by <a href="http://twitter.com/minleychris">Chris</a></p>
         <p class="lead">{{summary}}</p>
-        
+        <p class="tags">{{#tags}}<a class="label label-info" href="/tags/{{name}}.html">{{name}}</a> {{/tags}}</p>
+
 		{{&content}}
     </div>
 </div>
